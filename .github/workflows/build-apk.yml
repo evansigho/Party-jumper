@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
 
       # Lets you upload the project as ONE zip file (easy from a phone). It gets unpacked here.
       - name: Unpack project zip (if uploaded as a zip)
@@ -25,11 +25,11 @@ jobs:
             cp -r "$D"/* .
           fi
 
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - uses: actions/setup-java@v5
+      - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 21
